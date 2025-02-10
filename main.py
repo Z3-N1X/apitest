@@ -1,14 +1,13 @@
+import os
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to my free API!"}
+    return {"message": "API is running on Render!"}
 
-@app.get("/hello/{name}")
-def greet(name: str):
-    return {"message": f"Hello, {name}!"}
-
-# Run the API
-# In the terminal, run: uvicorn main:app --reload
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Default to 8000 locally
+    uvicorn.run(app, host="0.0.0.0", port=port)
