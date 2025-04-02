@@ -20,6 +20,6 @@ export default async function handler(req, res) {
     console.log(2)
     return res.status(200).json({ message: `Code ${code} set to "${value}".` });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal Server Error' });
+    return res.status(500).json({ error: 'NOOOO NOT WORKING' });
   }
 }
