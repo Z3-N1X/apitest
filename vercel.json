@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/get/(.*)", "dest": "/api/get/[code].js" },
-    { "src": "/api/set/(.*)/(.*)", "dest": "/api/set/[code]/[value].js" }
+    { "src": "/api/get", "dest": "/api/get.js" },
+    { "src": "/api/set", "dest": "/api/set.js" }
   ]
 }
